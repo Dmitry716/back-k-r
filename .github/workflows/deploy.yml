@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_KEY }}
           script: |
-            cd /home/user/back-k-r
+            cd /home/user/backend
             git pull
             docker compose up -d --build
             docker system prune -f
