@@ -83,7 +83,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use('/uploads', express.static('uploads'));
 
 // Static files from frontend public folder  
-const frontendPublicPath = '/var/www/stonerose-frontend/public';
+const frontendPublicPath = process.env.FRONTEND_PUBLIC_PATH;
 
 // Serve static files under /api/static/ to work with nginx proxy
 app.use('/api/static', express.static(frontendPublicPath, {
