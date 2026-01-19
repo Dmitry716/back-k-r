@@ -16,6 +16,7 @@ services:
       DB_NAME: ${DB_NAME}
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
+      FRONTEND_PUBLIC_PATH: ${FRONTEND_PUBLIC_PATH}
     volumes:
       - .:/app
       - ./uploads:/app/uploads
